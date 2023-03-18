@@ -1,0 +1,223 @@
+/*Variables*/
+
+$Primary-Bg: #004562;
+$Secondary-Bg: #00415a;
+$fontColor: #001f2b;
+$Section-Size: 100vh;
+
+body{
+    margin: 0;
+    background-color: #001f2b;
+    color: $fontColor;
+    height: 400%;
+
+}
+
+.First {
+    padding: 3%;
+    height: $Section-Size;
+    background-color: $Primary-Bg;
+}
+
+.Lightbulb{
+    
+    margin: auto;
+    background-color: antiquewhite;
+    height: 150px;
+    width: 159px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  transform:rotate(180deg);
+  background:url("../img/LightbulbOff.png") no-repeat;
+  &:hover {
+    width:159px;
+    height:150px;
+    -webkit-animation: anim 1s 1 forwards; /* Safari 4+ */
+    -moz-animation:    anim 1s 1 forwards; /* Fx 5+ */
+    -o-animation:      anim 1s 1 forwards; /* Opera 12+ */
+    animation:         anim 1s 1 forwards; /* IE 10+, Fx 29+ */
+  }
+}
+@-webkit-keyframes anim {
+  0%, 30%, 100% {
+    background:url("../img/LightbulbOn.png") no-repeat;
+  }
+  20%, 40% {
+    background:url("../img/LightbulbOff.png") no-repeat;
+  }
+}
+@-moz-keyframes anim {
+  0%, 30%, 100% {
+    background:url("../img/LightbulbOn.png") no-repeat;
+  }
+  20%, 40% {
+    background:url("../img/LightbulbOff.png") no-repeat;
+  }
+}
+@-o-keyframes anim {
+  0%, 30%, 100% {
+    background:url("../img/LightbulbOn.png") no-repeat;
+  }
+  20%, 40% {
+    background:url("../img/LightbulbOff.png") no-repeat;
+  }
+}
+@keyframes anim {
+  0%, 30%, 100% {
+    background:url("../img/LightbulbOn.png") no-repeat;
+  }
+  20%, 40% {
+    background:url("../img/LightbulbOff.png") no-repeat;
+  }
+}
+
+.Presentation {
+    height: 300px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 3.5em;
+    }
+}
+
+.ContactIcons {
+    margin: auto;
+    width: 40%;
+    height: 100px;
+    background-color: $Primary-Bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{ 
+        width: 250px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    a{  
+        margin: auto;
+        width: 50px;
+        img{width: 50px;}
+    }
+}
+}
+
+.Second{
+    height: $Section-Size;
+    background-color: burlywood;
+    padding: 10%;
+}
+
+.SecondContainer{
+
+    margin: auto;
+    background-color: azure;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    div{
+        margin: auto;
+        background-color: grey;
+        width: 19%;
+        height: 100%;
+        .SecImg{
+            background-color: lightblue;
+            width: 60%;
+            height: 25%;
+            display: flex;
+            margin-top: 5%;
+            max-width: 150px;
+            img{
+                filter: grayscale(100%);
+                margin: auto;
+                width: 80%;
+                &:hover{
+                    -webkit-filter: grayscale(0%);
+                    transition-duration: 0.8s
+                }
+            }
+        }
+        .SecDescription{
+            background-color: lightblue;
+            width: 80%;
+            height: 65%;
+            margin-top: 5%;
+        }
+    }
+}
+
+.Third {
+
+    height: $Section-Size;
+    width: 100%;
+    background-color: lightgray;
+
+}
+
+.Fourth {
+
+    height: $Section-Size;
+    width: 100%;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .FourthContainer{
+
+        width: 80%;
+        margin: auto;
+        background-color: aliceblue;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        form {
+            width: 100%;
+           div{
+            width: auto;
+            margin: auto;
+            display: flex;
+            padding: 1%;
+                input{
+                    width: 24%;
+                    margin: auto;   
+                }
+                .TextInput1{
+                    margin-right: 1%;
+                }
+                .TextInput2{
+                    margin-left: 1%;
+                }
+           }
+        input{ 
+            display: flex;
+            margin: auto;
+            text-align: left;
+            width:50%;
+            font-size: 1.3em;
+        }   
+        textarea{
+            display: block;
+            margin: auto;
+            width:50%;
+            font-size: 1.2em;
+        }
+        button{
+            width: auto;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     }
+    }
+
+}
