@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background-color: #001f2b;
-  color: #001f2b;
+  color: #062938;
   height: 400%;
 }
 
@@ -10,23 +10,44 @@ body {
   padding: 3%;
   height: 100vh;
   background-color: #004562;
+  filter: brightness(1);
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
 }
 
+@keyframes example {
+  20% {
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+  }
+  30% {
+    filter: brightness(0.4);
+    -webkit-filter: brightness(0.4);
+  }
+  40% {
+    filter: brightness(0.1);
+    -webkit-filter: brightness(0.1);
+  }
+  100% {
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+  }
+}
 .Lightbulb {
   margin: auto;
-  background-color: antiquewhite;
   height: 150px;
   width: 159px;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: brightness(1.2);
   transform: rotate(180deg);
   background: url("../img/LightbulbOff.png") no-repeat;
-}
-.Lightbulb:hover {
+  animation-name: anim;
   width: 159px;
   height: 150px; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
-  animation: anim 1s 1 forwards; /* IE 10+, Fx 29+ */
+  animation: anim 8s 1 forwards; /* IE 10+, Fx 29+ */
 }
 @keyframes anim {
   0%, 30%, 100% {
@@ -37,6 +58,8 @@ body {
   }
 }
 .Presentation {
+  @import url("https://fonts.googleapis.com/css?family=Playball");
+  font-family: "Playball", cursive;
   height: 300px;
   width: 60%;
   margin: auto;
@@ -46,14 +69,19 @@ body {
   flex-direction: column;
 }
 .Presentation h1 {
-  font-size: 3.5em;
+  color: #021923;
+  font-size: 6em;
+  margin-bottom: 4%;
+}
+.Presentation h3 {
+  font-size: 1.5em;
+  color: #021923;
 }
 
 .ContactIcons {
   margin: auto;
   width: 40%;
   height: 100px;
-  background-color: #004562;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,30 +98,36 @@ body {
   width: 50px;
 }
 .ContactIcons div a img {
-  width: 50px;
+  width: 55px;
+}
+.ContactIcons div a img:hover {
+  background-color: #062938;
+  width: 53px;
+  border-radius: 50%;
 }
 
 .Second {
   height: 100vh;
-  background-color: burlywood;
-  padding: 10%;
+  background-color: #00415a;
+  padding: 5%;
 }
 
 .SecondContainer {
   margin: auto;
-  background-color: azure;
-  height: 500px;
-  width: 100%;
+  background-color: transparent;
+  height: 600px;
+  width: 90%;
   display: flex;
 }
 .SecondContainer div {
   margin: auto;
-  background-color: grey;
-  width: 19%;
+  background-color: #062938;
+  width: 18%;
   height: 100%;
+  border-radius: 30px;
 }
 .SecondContainer div .SecImg {
-  background-color: lightblue;
+  background-color: none;
   width: 60%;
   height: 25%;
   display: flex;
@@ -103,7 +137,7 @@ body {
 .SecondContainer div .SecImg img {
   filter: grayscale(100%);
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 .SecondContainer div .SecImg img:hover {
   -webkit-filter: grayscale(0%);
@@ -111,9 +145,10 @@ body {
 }
 .SecondContainer div .SecDescription {
   background-color: lightblue;
-  width: 80%;
-  height: 65%;
+  width: 60%;
+  height: 68%;
   margin-top: 5%;
+  opacity: 50%;
 }
 
 .Third {
